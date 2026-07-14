@@ -1,10 +1,15 @@
+---
+// This is the correct way to import CSS in Astro
+import "../styles/style.css";
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Abhiraj Singh</title>
-    <link rel="stylesheet" href="public/styles/style.css">
+    <link href="../styles/style.css">
 </head>
 <body>
     <div class="container">
