@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+:root {
+    --bg-color: #fafafa;
+    --text-color: #111111;
+    --text-muted: #666666;
+    --border-color: #e5e5e5;
+    --accent: #000000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Typography */
+h1.hero-title {
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+h2.section-title {
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+/* Links & Buttons */
+a {
+    text-decoration: none;
+    color: var(--accent);
+    transition: all 0.3s ease;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--accent);
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background-color: #333333;
+    transform: translateY(-2px);
+}
+
+/* Header & Navigation */
+header {
+    margin-bottom: 80px;
+}
+
+.nav-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    display: inline-block;
+    border-bottom: 1px solid transparent;
+}
+
+.nav-link:hover {
+    border-bottom: 1px solid var(--accent);
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+.social-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    background: #ffffff;
+}
+
+.social-pill i {
+    font-size: 1.1rem;
+}
+
+.social-pill:hover {
+    border-color: var(--accent);
+    background: var(--bg-color);
+}
+
+/* Sections */
+section {
+    margin-bottom: 80px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Blog Cards */
+.blog-card {
+    margin-bottom: 40px;
+}
+
+.blog-meta {
+    font-size: 0.85rem;
+    color: #999999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.read-more-link {
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.read-more-link:hover {
+    gap: 10px;
+}
+
+/* --- Premium Blog Cards --- */
+.blog-card {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 4px;
+    transition: box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.blog-meta {
+    font-size: 0.85rem;
+    color: #999999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 12px;
+}
+
+.blog-card h3 {
+    font-size: 1.75rem;
+    letter-spacing: -0.5px;
+    margin-bottom: 5px;
+}
+
+.blog-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+/* The Fade-Out Effect */
+.card-excerpt-container {
+    position: relative;
+    max-height: 100px;
+    overflow: hidden;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.card-excerpt-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+
+.read-more-link {
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.read-more-link:hover {
+    gap: 10px;
+}
+
+.center-block {
+    text-align: center;
+    margin-top: 40px;
+}
