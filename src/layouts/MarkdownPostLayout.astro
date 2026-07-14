@@ -1,0 +1,39 @@
+---
+const { frontmatter } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{frontmatter.title} | Abhiraj Singh</title>
+    <link rel="stylesheet" href="/src/styles/style.css"> 
+</head>
+<body>
+    <div class="container">
+        <a href="/blog" class="nav-link">&larr; Back to Journal</a>
+        
+        <article class="blog-card" style="padding: 60px;">
+            <div class="blog-meta" style="margin-bottom: 30px;">
+                <span>{frontmatter.date} • {frontmatter.category}</span>
+                <span>{frontmatter.readTime}</span>
+            </div>
+
+            <h1 style="font-size: 2.5rem; letter-spacing: -1px; line-height: 1.1; margin-bottom: 10px;">
+                {frontmatter.title}
+            </h1>
+            
+            {frontmatter.subtitle && (
+                <p style="font-size: 1.25rem; color: var(--text-muted); margin-bottom: 40px;">
+                    {frontmatter.subtitle}
+                </p>
+            )}
+            
+            <div style="font-size: 1.1rem; color: var(--text-color); line-height: 1.8;">
+                <slot />
+            </div>
+        </article>
+    </div>
+</body>
+</html>

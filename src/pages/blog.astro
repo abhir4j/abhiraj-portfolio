@@ -1,0 +1,44 @@
+---
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Abhiraj Singh</title>
+    <link rel="stylesheet" href="src/styles/style.css"> 
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="nav-link">&larr; Back to Home</a>
+        
+        <h1 class="hero-title" style="margin-bottom: 40px;">Journal</h1>
+        
+        {allPosts.map((post) => (
+            <div class="blog-card">
+                <div class="blog-meta">
+                    <span>{post.frontmatter.date} • {post.frontmatter.category}</span>
+                    <span>{post.frontmatter.readTime}</span>
+                </div>
+                
+                <h3>{post.frontmatter.title}</h3>
+                {post.frontmatter.subtitle && (
+                    <p class="blog-subtitle">{post.frontmatter.subtitle}</p>
+                )}
+                
+                <div class="card-excerpt-container">
+                    <p>{post.frontmatter.excerpt}</p>
+                </div>
+                
+                <a href={post.url} class="read-more-link">Read the full post &rarr;</a>
+            </div>
+        ))}
+
+        <div class="center-block">
+            <a href="#" class="btn">Load Older Posts</a>
+        </div>
+    </div>
+</body>
+</html>
